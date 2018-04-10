@@ -4,16 +4,15 @@ def print_range(n):
         print(i, end="\t")
     print("\n :---"+("--")*((2*n)-1))
 
-print_range(12)
-
-def mult_table(n):
+def mult_table(n,m):
     print(n,end=":"+"\t")
-    for i in range(1,13):
+    for i in range(1,m):
         print(n*i, end="\t")
     print()
 
-for i in range(1,13):
-    mult_table(i)
+def styled_mult_table(m):
+        print_range(m)
+        for i in range(1,m+1):
+            mult_table(i,m+1)
 
-
-format = ""
+styled_mult_table(13)
