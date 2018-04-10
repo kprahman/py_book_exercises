@@ -13,7 +13,7 @@ def multiples(n,m):
     print()
 
 def styled_mult_table(m)
-    """prints the header along with a table showing m multiples of m
+    """prints the header along with a table showing m multiples of m"""
         print_range(m)
         for i in range(1,m+1):
             multiples(i,m+1)
