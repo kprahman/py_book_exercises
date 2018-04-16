@@ -1,13 +1,9 @@
-l1=[1,2,3,4]
-l2=[1,2,3,4]
-
-
-def add_vectors(l1, l2):
-    l3 = []
-    for i in range(len(l1)):
-        sum = l1[i] + l2[i]
-        l3.append(sum)
-    return l3
+def scalar_mult(s,v):
+    mults= []
+    for i in range(len(v)):
+        scalar= v[i] * s
+        mults.append(scalar)
+    return mults
 
 import sys
 
@@ -25,19 +21,10 @@ def test_suite():
     """ Run the suite of tests for code in this module (this file).
     """
 
-    test(add_vectors([1, 1], [1, 1]) == [2, 2])
-    test(add_vectors([1, 2], [1, 4]) == [2, 6])
-    test(add_vectors([1, 2, 1], [1, 4, 3]) == [2, 6, 4])
+    test(scalar_mult(5, [1, 2]) == [5, 10])
+    test(scalar_mult(3, [1, 0, -1]) == [3, 0, -3])
+    test(scalar_mult(7, [3, 0, 5, 11, 2]) == [21, 0, 35, 77, 14])
 
 
 test_suite()
-
-
-
-
-
-
-
-
-
 

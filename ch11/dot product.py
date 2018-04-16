@@ -1,13 +1,9 @@
-l1=[1,2,3,4]
-l2=[1,2,3,4]
-
-
-def add_vectors(l1, l2):
-    l3 = []
-    for i in range(len(l1)):
-        sum = l1[i] + l2[i]
-        l3.append(sum)
-    return l3
+def dot_product(u,v):
+    add = 0
+    for i in range(len(u)):
+        product = u[i]*v[i]
+        add = add + product
+    return add
 
 import sys
 
@@ -25,19 +21,9 @@ def test_suite():
     """ Run the suite of tests for code in this module (this file).
     """
 
-    test(add_vectors([1, 1], [1, 1]) == [2, 2])
-    test(add_vectors([1, 2], [1, 4]) == [2, 6])
-    test(add_vectors([1, 2, 1], [1, 4, 3]) == [2, 6, 4])
+    test(dot_product([1, 1], [1, 1]) == 2)
+    test(dot_product([1, 2], [1, 4]) == 9)
+    test(dot_product([1, 2, 1], [1, 4, 3]) == 12)
 
 
 test_suite()
-
-
-
-
-
-
-
-
-
-
