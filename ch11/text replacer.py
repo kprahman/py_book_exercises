@@ -1,4 +1,4 @@
-def replace(s, old, new):
+def replace(old,new,s):
     w = s.split(old)
 
     list_of_words = []
@@ -12,6 +12,10 @@ def replace(s, old, new):
             list_of_words.append(v)
     final_string = "".join(list_of_words)
     return final_string
+
+
+
+
 
 
 
