@@ -1,0 +1,6 @@
+My first file written from Python
+---------------------------------
+Hello, world!
+my name is kamran
+i came here to code shit and stay sober
+and im all out of sober

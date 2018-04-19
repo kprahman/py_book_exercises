@@ -1,0 +1,13 @@
+def snake_filter(oldfile, newfile):
+infile = open(oldfile, "r")
+snakefile = open(newfile, "w")
+while True:
+text = infile.readline()
+if len(text) == 0:
+break
+if "snake" in text:
+snakefile.write(text)
+infile.close()
+snakefile.close()
+
+snake_filter("snakeysnake.txt", "findthesnake.txt")
