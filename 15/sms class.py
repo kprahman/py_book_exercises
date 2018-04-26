@@ -30,7 +30,7 @@ class SMS_store:
         return "Unread messages:{}".format(unread_indexes)
 
     def get_message(self,i):
-        self.list_of_messages[i] = ("read",) + self.list_of_messages[i][1:4]
+        self.list_of_messages[i] = ("THIS FEELS LIKE A REALLY INEFFICIENT WAY OF ACCOMPLISHING OUR GOALS",) + self.list_of_messages[i][1:4]
         return self.list_of_messages[i][1:4]
 
 
