@@ -1,4 +1,5 @@
 import sys
+import time
 
 def test(did_pass):
     """  Print the result of a test.  """
@@ -8,3 +9,10 @@ def test(did_pass):
     else:
         msg = ("Test at line {0} FAILED.".format(linenum))
     print(msg)
+
+def timer(func):
+    t0=time.clock()
+    func
+    t1=time.clock()
+    print("That took {} seconds to complete!".format(t1-t0))
+
