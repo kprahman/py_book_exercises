@@ -35,9 +35,14 @@ class LinkedList:
 
 
 def print_list(node):
+    print("[",end="")
     while node is not None:
-        print(node, end =" ")
+        print(node, end ="")
         node = node.next
+        if node is not None:
+            print(", ", end ="")
+        else:
+            print("]")
     print()
 
 def print_backwards(list):
@@ -49,7 +54,7 @@ def print_backwards(list):
 
 def add_brackets(list):
     print("[", end=" ")
-    print_backwards(list)
+    print_list(list)
     print("]")
 
 def remove_second(list):
@@ -65,8 +70,8 @@ def remove_second(list):
     return second
 
 node = Node("test")
-node3 = Node()
+node3 = Node(3)
 node2 = Node(2, node3)
 node1 = Node(1, node2)
 
-remove_second(node3)
+print_list(node1)
